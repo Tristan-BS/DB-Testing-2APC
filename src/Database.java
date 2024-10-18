@@ -58,7 +58,7 @@ public class Database {
                 double comm = resultSet.getDouble("COMM");
                 int deptNo = resultSet.getInt("DEPTNO");
 
-                System.out.println("\n" + "EMPNO: " + empNo + ", ENAME: " + eName + ", JOB: " + job + ", MGR: " + mgr + ", HIREDATE: " + hireDate + ", SAL: " + sal + ", COMM: " + comm + ", DEPTNO: " + deptNo);
+                System.out.println("EMPNO: " + empNo + ", ENAME: " + eName + ", JOB: " + job + ", MGR: " + mgr + ", HIREDATE: " + hireDate + ", SAL: " + sal + ", COMM: " + comm + ", DEPTNO: " + deptNo);
             }
 
         } finally {
@@ -86,7 +86,7 @@ public class Database {
                 double comm = resultSet.getDouble("COMM");
                 int deptNo = resultSet.getInt("DEPTNO");
 
-                System.out.println("\n" + "EMPNO: " + empNo + ", ENAME: " + eName + ", JOB: " + job + ", MGR: " + mgr + ", HIREDATE: " + hireDate + ", SAL: " + sal + ", COMM: " + comm + ", DEPTNO: " + deptNo);
+                System.out.println("EMPNO: " + empNo + ", ENAME: " + eName + ", JOB: " + job + ", MGR: " + mgr + ", HIREDATE: " + hireDate + ", SAL: " + sal + ", COMM: " + comm + ", DEPTNO: " + deptNo);
             } else {
                 System.out.println("\n" + "Employee with EMPNO " + employeeNumber + " not found!" + "\n\n");
             }
