@@ -24,6 +24,7 @@ public class Database {
         this.DatabasePassword = "";
     }
 
+    // Connection to Database
     protected Connection ConnectToDatabase() {
         Connection connection = null;
         try {
@@ -36,6 +37,7 @@ public class Database {
         }
     }
 
+    // Print all Employees
     protected void PrintEmployees() throws SQLException {
         Connection connection = ConnectToDatabase();
 
@@ -65,7 +67,8 @@ public class Database {
     }
 
 
-    public void PrintSpecificEmployye(String employeeNumber) throws SQLException {
+    // Print a Employee with specific Employee Number
+    protected void PrintSpecificEmployye(String employeeNumber) throws SQLException {
         Connection connection = ConnectToDatabase();
         try {
             String Query = "SELECT * FROM emp WHERE EMPNO = " + employeeNumber;
@@ -89,6 +92,23 @@ public class Database {
             }
         } finally {
             System.out.println("\n" + "Specific employee printed!" + "\n\n");
+        }
+    }
+
+    // Show All Tables in Database
+    protected void ShowAllTables() throws SQLException {
+        Connection connection = ConnectToDatabase();
+        try {
+            String Query = "SHOW TABLES";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(Query);
+
+            while (resultSet.next()) {
+                String tableName = resultSet.getString("Tables_in_" + DatabaseName);
+                System.out.println("Table: " + tableName);
+            }
+        } finally {
+            System.out.println("\n" + "All tables printed!" + "\n\n");
         }
     }
 }

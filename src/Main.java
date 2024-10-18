@@ -5,10 +5,11 @@ public class Main {
 
     public static void main(String[] args) throws SQLException {
         EmployeeNumber = "7844";
-
         Database db = new Database();
-        db.PrintEmployees();
 
+
+        db.ShowAllTables();
+        db.PrintEmployees();
         db.PrintSpecificEmployye(EmployeeNumber);
 
     }
