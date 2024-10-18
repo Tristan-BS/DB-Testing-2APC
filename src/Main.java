@@ -1,5 +1,15 @@
+import java.sql.SQLException;
+
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    protected static String EmployeeNumber;
+
+    public static void main(String[] args) throws SQLException {
+        EmployeeNumber = "7844";
+
+        Database db = new Database();
+        db.PrintEmployees();
+
+        db.PrintSpecificEmployye(EmployeeNumber);
+
     }
 }
